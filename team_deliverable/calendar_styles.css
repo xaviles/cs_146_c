@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+#month {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #12b8a1;
+    padding: 15px;
+}
+
+#month_name {
+    font-size: 3em;
+}
+
+#year {
+    font-size: 2em;
+}
+
+#weekdays {
+    background-color: #ddd;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+#days {
+    background-color: #eee;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#weekdays li {
+  display: inline-block;
+  flex: 1 0 13%;
+  color: #666;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#days li {
+  display: inline-block;
+  flex: 1 0 13%;
+  color: #666;
+  text-align: center;
+  padding: 10px 0;
+}
+

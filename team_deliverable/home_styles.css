@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.tasks > * {
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+
+.tasks ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.very-urgent li {
+    background-color: #ec4646;
+    padding: 15px 0;
+    border: 1px dashed blue;
+}
+
+.somewhat-urgent li {
+    background-color: #e8e841;
+    padding: 15px 0;
+    border: 1px dashed blue;
+}
+
+.not-urgent li {
+    background-color: #3bdb3b;
+    padding: 15px 0;
+    border: 1px dashed blue;
+}

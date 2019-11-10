@@ -2,18 +2,37 @@
 <html>
     <head>
         <title>Student Planner</title>
-        <link rel="stylesheet" href="plannerstyles.css"/>
+        <link rel="stylesheet" href="planner_styles.css"/>
     </head>
     <body>
         <div class="container">
             <h1>This is the Student Planner.</h1>
+            <div id="main">
+                <div class="content" id="content_home">
+                    <iframe name="home" src="./home.html"></iframe>
+                </div>
+                <div class="content" id="content_calendar">
+                    <iframe name="calendar" src="./calendar.html"></iframe>
+                </div>
+                <div class="content" id="content_events">
+                    <h1>events</h1>
+                </div>
+                <div class="content" id="content_notes">
+                    <h1>notes</h1>
+                </div>
+                <div class="content" id="content_other">
+                    <h1>other</h1>
+                </div>
+            </div>
             <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="calendar.html">Calendar</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="notes.html">Notes</a></li>
-                <li><a href="other.html">Other</a></li>
+                <li><a id="menu_home" class="menu">Home</a></li>
+                <li><a id="menu_calendar" class="menu">Calendar</a></li>
+                <li><a id="menu_events" class="menu">Events</a></li>
+                <li><a id="menu_notes" class="menu">Notes</a></li>
+                <li><a id="menu_other" class="menu">Other</a></li>
             </ul>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="planner.js"></script>
     </body>
 </html>
