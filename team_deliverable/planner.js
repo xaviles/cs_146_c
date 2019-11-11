@@ -1,4 +1,4 @@
-$(".menu").each(function(index) {
+$('.menu').each(function(index) {
   $(this).click(function(){
     makeActive($(this)[0].id); 
   });
@@ -20,3 +20,13 @@ function makeActive(menu_id){
 
 if (localStorage.active_tab === undefined || !makeActive(localStorage.active_tab))
   makeActive('menu_home');
+
+var menu_collapsed = true; 
+$('.collapsible').click(function(){
+  console.log('clicked');
+  if (menu_collapsed)
+    $('.menu').addClass('visible');
+  else
+    $('.menu').removeClass('visible');
+  menu_collapsed ^= true;
+});

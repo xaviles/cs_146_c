@@ -1,4 +1,7 @@
-<!–– Group members: Xavier Aviles, Ben Mirtchouk, Daniel Ptashny ––>
+<!-- Group members: Xavier Aviles, Ben Mirtchouk, Daniel Ptashny 
+
+I pledge my honor that I have abided by the Stevens Honor System.
+-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,6 +10,14 @@
     </head>
     <body>
         <div class="container">
+            <button type="button" class="collapsible">Menu</button>
+            <ul class="menu_items">
+                <li><button id="menu_home" class="menu">Home</button></li>
+                <li><button id="menu_calendar" class="menu">Calendar</button></li>
+                <li><button id="menu_events" class="menu">Events</button></li>
+                <li><button id="menu_notes" class="menu">Notes</button></li>
+                <li><button id="menu_other" class="menu">Other</button></li>
+            </ul>
             <h1>This is the Student Planner.</h1>
             <div id="main">
                 <div class="content" id="content_home">
@@ -25,13 +36,6 @@
                     <h1>other</h1>
                 </div>
             </div>
-            <ul>
-                <li><a id="menu_home" class="menu">Home</a></li>
-                <li><a id="menu_calendar" class="menu">Calendar</a></li>
-                <li><a id="menu_events" class="menu">Events</a></li>
-                <li><a id="menu_notes" class="menu">Notes</a></li>
-                <li><a id="menu_other" class="menu">Other</a></li>
-            </ul>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="planner.js"></script>
