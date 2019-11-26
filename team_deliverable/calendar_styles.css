@@ -53,5 +53,22 @@ ul {
   color: #666;
   text-align: center;
   padding: 10px 0;
+  cursor: pointer;
 }
 
+#day-assignments {
+  padding: 20px 35px;
+  border: 5px solid #12b8a1;
+  margin-top: 25px;
+}
+
+li.selected {
+  box-shadow: inset 0px 0px 0px 5px grey;
+}
+
+p.todo {
+  display: inline-block;
+  border: 3px solid grey;
+  margin: 10px 10px;
+  padding: 10px;
+}

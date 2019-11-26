@@ -5,25 +5,28 @@
     </head>
     <body>
         <div class="container">
-            <div id="month">
-                <span id="month_name">January</span>
-                <span id="year">1970</span>
+            <div class="calendar">
+                <div id="month">
+                    <span id="month_name">January</span>
+                    <span id="year">1970</span>
+                </div>
+
+                <ul id="weekdays">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                </ul>
+
+                <ul id="days">    
+                </ul>
             </div>
-
-            <ul id="weekdays">
-                <li>Mo</li>
-                <li>Tu</li>
-                <li>We</li>
-                <li>Th</li>
-                <li>Fr</li>
-                <li>Sa</li>
-                <li>Su</li>
-            </ul>
-
-            <ul id="days">    
-            </ul>
+            <div id="day-assignments">
+            </div>
         </div>
-        <h3>This calendar is dynamically generated and will have student content on it in the final version but it is a little hard to mock up without implementing the main JS backend</h3>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="calendar.js"></script>
     </body>

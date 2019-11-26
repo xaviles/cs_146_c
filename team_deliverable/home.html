@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,30 +9,41 @@
                 <div class="very-urgent">
                     <h2>Urgent</h2>
                     <ul>
-                        <li>task1</li>
-                        <li>task4</li>
-                        <li>task9</li>
+                        <li class="new-task" id="new-red">+</li>
                     </ul>
                 </div>
                 <div class="somewhat-urgent">
                     <h2>Somewhat Urgent</h2>
                     <ul>
-                        <li>task3</li>
-                        <li>task6</li>
+                        <li class="new-task" id="new-yellow">+</li>
                     </ul>
                 </div>
                 <div class="not-urgent">
                     <h2>Not Urgent</h2>
                     <ul>
-                        <li>task2</li>
-                        <li>task5</li>
-                        <li>task7</li>
-                        <li>task8</li>
+                        <li class="new-task" id="new-green">+</li>
                     </ul>
                 </div>
             </div>
-        </div>
+            <div id="new-task-form" class="hidden">
+                <label for="assignment-name">Assignment Name:</label>
+                <input name="assignment-name" type="text"><br>
+                
+                <label for="assignment-subject">Assignment Subject:</label>
+                <input name="assignment-subject" type="text"><br>
+                
+                <label for="assignment-duedate">Assignment Duedate:</label>
+                <input name="assignment-duedate" type="datetime-local"><br>
+                
+                <label for="assignment-size">Assignment Size:</label>
+                <select name="assignment-size">
+                </select><br>
 
-        <h3>This will obviously be populated with inputted data, but for now we have it static as a mock-up for when we add JS functionality</h3>
+                <p class="error hidden">error</p>
+                <button id="form-submit">Done</button>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="home.js"></script>
     </body>
 </html>
