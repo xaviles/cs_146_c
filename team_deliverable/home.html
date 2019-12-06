@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
     <head>
         <title>Student Planner</title>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="home_styles.css"/>
     </head>
     <body>
@@ -26,23 +27,23 @@
                     </ul>
                 </div>
             </div>
-            <div id="new-task-form" class="hidden">
+            <form id="new-task-form" class="hidden">
                 <label for="assignment-name">Assignment Name:</label>
-                <input name="assignment-name" type="text"><br>
+                <input id="assignment-name" type="text" minlength="3" maxlength="20"><br>
                 
                 <label for="assignment-subject">Assignment Subject:</label>
-                <input name="assignment-subject" type="text"><br>
+                <input id="assignment-subject" type="text"><br>
                 
                 <label for="assignment-duedate">Assignment Duedate:</label>
-                <input name="assignment-duedate" type="datetime-local"><br>
+                <input id="assignment-duedate" type="datetime-local" required><br>
                 
                 <label for="assignment-size">Assignment Size:</label>
-                <select name="assignment-size">
+                <select id="assignment-size">
                 </select><br>
 
                 <p class="error hidden">error</p>
-                <button id="form-submit">Done</button>
-            </div>
+                <button type="submit" id="form-submit">Done</button>
+            </form>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="home.js"></script>

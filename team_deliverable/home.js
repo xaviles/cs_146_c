@@ -1,5 +1,10 @@
 let checkmark = '<img class=\"checkmark\" src=\"blue-check.png\" onclick=\"mark_done(this)\">';
 
+let assignment_name = $('input[id="assignment-name"]')[0];
+let assignment_subject = $('input[id="assignment-subject"]')[0];
+let assignment_due = $('input[id="assignment-duedate"]')[0];
+let assignment_size = $('select[id="assignment-size"]');
+
 // start load data
 
 if (localStorage.getItem("nxtId") === null){
@@ -18,9 +23,8 @@ for (let id in assignments){
 }
 // end load data
 
-let size_select = $('select[name=assignment-size]');
 for (let i=1; i<=10; i++){
-  size_select.append('<option value=\"' + i + '\">' + i + '</option>');
+  assignment_size.append('<option value=\"' + i + '\">' + i + '</option>');
 }
 
 function mark_done(e){
@@ -47,8 +51,6 @@ $('.new-task').each(function(index) {
 
 let form = $('#new-task-form');
 let error_text = $('p.error');
-$('#form-submit').click(process_form);
-
 let cur_ul = undefined;
 
 function add_new(ul){
@@ -56,14 +58,9 @@ function add_new(ul){
   cur_ul = ul;
 }
 
-let assignment_name = $('input[name="assignment-name"]')[0];
-let assignment_subject = $('input[name="assignment-subject"]')[0];
-let assignment_due = $('input[name="assignment-duedate"]')[0];
-let assignment_size = $('select[name="assignment-size"]')[0];
-
-function process_form(){
+form.submit((e) => {
+  e.preventDefault();
   if (!adding) return;
-  console.log("processing form");
 
   let error = '';
   if (assignment_name.value == '') error += "Must supply name\n";
@@ -81,7 +78,7 @@ function process_form(){
     name: assignment_name.value,
     subject: assignment_subject.value,
     due: assignment_due.value,
-    size: assignment_size.value,
+    size: assignment_size[0].value,
     lvl: cur_ul.parentElement.className,
     progress: 0
   };
@@ -93,9 +90,9 @@ function process_form(){
   assignment_name.value = "";
   assignment_subject.value = "";
   assignment_due.value = "";
-  assignment_size.value = "1";
+  assignment_size[0].value = "1";
   error_text.addClass('hidden');
   form.addClass('hidden');
 
-  $(cur_ul).prepend('<li id=\"' + assignment.id + '\"><p>' + assignment.name + '</p>' + checkmark + '</li>')
-}
+  $(cur_ul).prepend('<li id=\"' + assignment.id + '\"><p>' + assignment.name + '</p>' + checkmark + '</li>');
+});
